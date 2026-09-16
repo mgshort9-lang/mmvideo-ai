@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,7 @@ function previewVideo() {
   const file = document.getElementById('videoFile').files[0];
 
   if (!file) {
-    alert("Video ရွေးပါ");
+    alert('Video ရွေးပါ');
     return;
   }
 
