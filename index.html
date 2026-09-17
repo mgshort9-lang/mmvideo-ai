@@ -8,12 +8,30 @@
 
 <h1>MM Video AI</h1>
 
-<p>Video Link</p>
-<input type="text" placeholder="YouTube Link">
+<p>Upload Video</p>
+<input type="file" id="videoFile" accept="video/*">
 
 <br><br>
 
-<button>Translate Video</button>
+<video id="preview" width="320" controls></video>
+
+<br><br>
+
+<button onclick="previewVideo()">Preview Video</button>
+
+<script>
+function previewVideo() {
+    const file = document.getElementById('videoFile').files[0];
+
+    if (!file) {
+        alert('Video ရွေးပါ');
+        return;
+    }
+
+    const url = URL.createObjectURL(file);
+    document.getElementById('preview').src = url;
+}
+</script>
 
 </body>
 </html>
